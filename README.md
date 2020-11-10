@@ -21,7 +21,7 @@ The config.js file should look something like this:<br/>
 const apiKey = 'YOUR API KEY';<br/>
 export default apiKey;<br/>
 
-Import your API key into your application, preferably into src/App.js, and save it to a variable like you would any other module, and use the variable where applicable. That way, your app’s users will only need to enter an API key once.<br />
+Import your API key into a config.js file in the variable ApiKey and export it.After it import it in the App.js file and you are good to go!<br />
 
 ## CSS Style Update Change
 
