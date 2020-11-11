@@ -65,21 +65,13 @@ componentDidMount(){
           });
 
         }else{
-          if(query.length === 0)
-          {
-            this.setState({
-              search: this.state.ocean,
-              loading: false
-            });
-          }else{
           this.setState({
             search: response.data.photos.photo,
             loading: false
           });
           }
         }
-        
-      }) 
+      ) 
    //handle error
   } catch (error) { 
     console.log('Error fetching and parsing data', error);
@@ -97,7 +89,7 @@ componentDidMount(){
             <Route path="/ocean" render = { () => (this.state.loading) ? <p>Loading...</p> : <PhotoContainer data = {this.state.ocean}/>  }  />
             <Route path="/sun" render = { () => (this.state.loading) ? <p>Loading...</p> : <PhotoContainer data = {this.state.sun}/>  }  />
             <Route path="/moon" render = { () => (this.state.loading) ? <p>Loading...</p> : <PhotoContainer data = {this.state.moon}/> } /> 
-            <Route path="/search/:query" render = {() => (this.state.loading) ? <p>Loading...</p> : <PhotoContainer data = {this.state.search}/> } />
+            <Route path="/search/:query" render = {() => (this.state.loading) ? <p>Loading...</p> : <PhotoContainer  data = {this.state.search}/> } />
             <Route component={ Error404} />
           </Switch>
         </div>

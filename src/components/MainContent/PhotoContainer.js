@@ -3,7 +3,6 @@ import Photo from './Photo';
 import NotFound from './NotFound';
 
 const Container = props => {
-
         const results = props.data;
         let images;
 
